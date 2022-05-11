@@ -13,8 +13,6 @@
     
 
     
-        <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in "/>
-    
 
     <!--Author-->
     
@@ -23,12 +21,10 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hello World"/>
+        <meta property="og:title" content="Hezheng&#39;s Blog"/>
     
 
     <!--Open Graph Description-->
-    
-        <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in "/>
     
 
     <!--Open Graph Site Name-->
@@ -36,7 +32,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="article"/>
+        <meta property="og:type" content="website"/>
     
 
     <!--Page Cover-->
@@ -55,7 +51,7 @@
 
     <!-- Title -->
     
-    <title>Hello World - Hezheng&#39;s Blog</title>
+    <title>Tech - Hezheng&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -151,90 +147,51 @@
 </nav>
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<!-- Set your background image for this header in your post front-matter: cover -->
+    
 
+<!-- Page Header -->
+<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>Hello World</h1>
-                    
-                    <span class="meta">
-                        <!-- Date and Author -->
-                        
-                            Posted by He.zheng on
-                        
-                        
-                            2022-05-07
-                        
-                    </span>
+                <div class="site-heading">
+                    <h1>Tech</h1>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-            <!-- Tags and categories -->
-           
-
-            <!-- Gallery -->
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             
-
-            <!-- Post Main Content -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h3><p>2022年3月14日，开始的上海疫情封控，重新review八方论坛时，发现王孟源先生的观点深邃和前瞻。搜索blog中，发现<a target="_blank" rel="noopener" href="https://taizihuang.github.io/wmyblog/index.html">王孟源的博客镜像</a>，汇聚博客其内容，又定期更新文章和评估，还提供文章搜索，以及八方针对王访谈的音频链接，感觉很方便。进一步发现，这个网站是个人github的网页，并基于Hexo框架，觉得有趣。同时，前面稍微研究了docker，想试试基于docker生成hexo网站，并上传以自己的github repository，也建立自己的github pages，后面自己的技术研究的一些心得，也可以同步记录。</p>
-<h3 id="上手"><a href="#上手" class="headerlink" title="上手"></a>上手</h3><ol>
-<li>Thinkpad X230 vmware centos，发现BIOS的虚拟化开关没有打开；</li>
-<li>BIOS有密码…</li>
-<li>自己拆机，用短接法，重置BIOS admin密码(搞断手托板触摸屏的排线金脚，却意外发现鼠标接收器被小朋友塞进笔记本）；</li>
-<li>装回机器，开机8声滴…</li>
-<li>再拆机，把BIOS电池重接，老本焕发第二春；</li>
-<li>centos虚拟化成功。</li>
-</ol>
-<h3 id="Hexo-docker"><a href="#Hexo-docker" class="headerlink" title="Hexo docker"></a>Hexo docker</h3><p>几个快键命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">docker</span> run -d -ti -p <span class="token number">4000</span>:4000 -v /mydocker/myhexo/blog:/usr/blog/ myhexo01 /bin/bash
-
-<span class="token variable">$ssh</span>-keygen -t rsa -C <span class="token string">"youremail@example.com"</span> 
-
-~/.ssh/id_rsa.pub
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h3><p>关键是Repository的名字，要设置成唯一的”tristanbao.github.com”，才能以缺省URL访问。</p>
-<p>Hexo d 成功！</p>
-<h3 id="修改文章"><a href="#修改文章" class="headerlink" title="修改文章"></a>修改文章</h3><ol>
-<li>clone到本地，editpuls修改，界面不友好；</li>
-<li>安装hexo-admin，<a href="localhost:4000/admin">hexo admin后台修改console</a>；</li>
-<li>就到这里来了…</li>
-</ol>
-<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><ol>
-<li>Hexo换主题，加搜索；</li>
-<li>记录技术心得；</li>
-<li>吐槽…</li>
-</ol>
-
-
-                
-            </div>
-
-            <!-- Comments -->
+                <div class="post-preview">
+    <a href="/2022/05/08/Docker是个好东西/">
+        <h1 class="post-title archive">
+            Docker是个好东西
+        </h1>
+    </a>
+    <p class="post-meta archive">
+        <!-- Date and Author -->
+        
+            Posted by He.zheng on
+        
+        2022-05-08
+    </p>
+</div>
             
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    
-
-
-                </div>
-            
+            <div class="archive-before-pagination"></div>
+            <ul class="pager">
+    
+    
+</ul>
         </div>
     </div>
-</article>
+</div>
+
 
     <!-- Footer -->
     <hr />
