@@ -51,14 +51,14 @@
 
     <!-- Title -->
     
-    <title>Archives - Hezheng&#39;s Blog</title>
+    <title>Search - Hezheng&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- Custom CSS -->
     
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://tristanbao.github.io/css/style.css">
 
 
     <!-- Custom Fonts -->
@@ -81,7 +81,41 @@
 
 
     <!-- favicon -->
+    <!-- button style -->
+    <style>
+    button[type=searchbutton] {
+        background-color: #e7e7e7; /* 灰色 */
+        border: none;
+        color: black;
+        padding: 6px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Lora';
+        font-size: 20px;
+        
+        cursor: pointer;
+    }
+    </style>
+
+    <!-- button style -->
+    <style>
+    input[type=searchtext] {
+      width: 250px;
+      padding: 6px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      color: black;
+  
+    }
+    </style>
     
+    <script src='jquery.min.js'></script>
+    <script src='search.js'></script>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name=viewport>
+    <meta charset=utf-8>
+
 
 <meta name="generator" content="Hexo 6.1.0"></head>
 
@@ -151,48 +185,54 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('https://tristanbao.github.io/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
                     <h1>Search</h1>
+                     <div class="input">
+                        <input type="searchtext" onkeydown="enter(event)" id="search-input">
+                        <button type="searchbutton" onclick="search()">Go</button>
+                    </div>
                 </div>
-				<div class="input">
-					<input type="text" onkeydown="enter(event)" id="search-input">
-					<button type="button" onclick="search()">Search</button>
-				 </div>
+			
+
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
+
+
+<!-- Search Content -->
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2022/05/07/hello-world/">
-        <h1 class="post-title archive">
-            Hello World
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
         
-        2022-05-07
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
+
         </div>
+
+
     </div>
+            
+            <div class="archive-before-pagination">
+                <H1> searchResult</H1>
+            </div>
+            <ul class="pager">
+            </ul>
+    </div>
+    
 </div>
+
+<script>
+    function enter(e) {
+        if (e.keyCode == 13) {
+            var searchResult = "Hello World"
+        }
+    }
+</script>
+
 
 
     <!-- Footer -->
@@ -204,16 +244,6 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
                     
                 </ul>
                 <p class="copyright text-muted">&copy; 2022 He.zheng<br></p>
